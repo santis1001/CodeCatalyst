@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 1%;
+}
+
+img{
+    display: block;   
+    width: 200px;
+    height: 120px;
+}
+
+h1{
+    color: blue;
+}
+.contact_info{
+    color: blue;
+}
+#email{
+    background-color: orange
+}
+#github{    
+    background-color: lightblue;
+}
+#portfolio{
+    background-color: orangered;
+}
+.lesson{
+    background-color: lightyellow;
+}
