@@ -1,0 +1,33 @@
+var one = 64n;
+var two = "656302";
+var three = false;
+var four = 64.55;
+var five = "Howdy!";
+var six;
+
+// Insert comments to explain what each console log below will log to the console
+
+//Integer
+console.log(typeof one); 
+//String
+console.log(typeof two); 
+//bool
+console.log(typeof three); 
+//float
+console.log(typeof four); 
+//string
+console.log(typeof five);
+//undefined
+console.log(typeof six);
+
+four = "Hello!";
+five = false;
+six = 23;
+
+// Insert comments to explain what each console log below will log to the console
+//string
+console.log(typeof four);
+//bool
+console.log(typeof five);
+//Integer
+console.log(typeof six);
