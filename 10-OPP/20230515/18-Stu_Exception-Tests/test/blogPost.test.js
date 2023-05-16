@@ -11,9 +11,9 @@ describe('BlogPost', () => {
   });
 
   // Test for invalid characters in authorName
-  describe('Chracters', () => {
+  describe('Characters', () => {
     it('throws an error when authorName contains invalid characters', () => {
-      const cb = () => new BlogPost('James+10');
+      const cb = () => new BlogPost('J/ames10');
       const err = new Error('Author must only contain letters, numbers, dashes, and underscores.');
       expect(cb).toThrow(err);
     });
