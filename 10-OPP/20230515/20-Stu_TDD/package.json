@@ -1,0 +1,19 @@
+{
+  "name": "16-stu_mock-fs",
+  "version": "1.0.0",
+  "description": "Work with a partner to add comments describing the functionality of the code found in [Unsolved/lib/BlogPost.test.js](./Unsolved/lib/BlogPost.test.js), [Unsolved/lib/Comment.test.js](./Unsolved/lib/Comment.test.js), and [Unsolved/lib/ForumItem.test.js](./Unsolved/lib/ForumItem.test.js).",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "keywords": []
+}
