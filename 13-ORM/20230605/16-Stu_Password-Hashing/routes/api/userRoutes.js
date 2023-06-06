@@ -10,7 +10,6 @@ router.post('/login', async (req, res) => {
       res.status(404).json({ message: 'Login failed. Please try again!' });
       return;
     }
-
     const validPassword = await bcrypt.compare(
       req.body.password,
       userData.password
