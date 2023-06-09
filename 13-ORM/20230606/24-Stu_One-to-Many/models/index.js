@@ -11,4 +11,10 @@ LibraryCard.belongsTo(Reader, {
   foreignKey: 'reader_id',
 });
 
+Reader.hasMany(Book, {
+  foreignKey:'reader_id',
+  onDelete: 'CASCADE',
+
+});
+
 module.exports = { Reader, Book, LibraryCard };
