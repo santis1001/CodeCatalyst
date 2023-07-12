@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
 // TODO: Define a new schema named `bookSchema` for the subdocument
-
+const bookSchema = new mongoose.Schema({
+  title: { type: String, require: true },
+  price: Number,
+});
 const librarySchema = new mongoose.Schema({
   name: { type: String, required: true },
   //

@@ -57,9 +57,18 @@ app.delete('/find-one-delete/:genre', async (req, res) => {
 });
 
 app.put('/find-one-update/:genre', async (req, res) => {
-  // TODO: Write a route that will find the first instance of a document that contains a name with the value equal to 'Kids'
-  // Update that name with the value given from the URL param
-  // Return the updated document
+  try {
+    const filter = { name: req.params.genre };
+    const newGenre = { name: req.body.name };
+
+    const result = await Genre.findOneAndUpdate(filter, newGenre, {new:true});
+
+    console.log(`Update: ${result}`);
+    res.status(200).json(result);
+  } catch (err) {
+    console.log('Uh Oh, something went wrong');
+    res.status(500).json({ message: 'something went wrong' });
+  }
 });
 
 db.once('open', () => {
