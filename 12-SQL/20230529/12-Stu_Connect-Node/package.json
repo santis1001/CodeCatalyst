@@ -1,0 +1,19 @@
+{
+  "name": "connectnode",
+  "version": "1.0.0",
+  "description": "Node connection code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cli-table": "^0.3.11",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5"
+  },
+  "keywords": []
+}

@@ -1,0 +1,15 @@
+{
+  "name": "14-stu-post-requests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "Work with a partner to implement the following user story:",
+  "keywords": [],
+  "author": ""
+}
