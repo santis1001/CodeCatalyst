@@ -16,7 +16,7 @@ module.exports = () => {
         template: './index.html',
         title: 'TODOs List'
       }),
-     
+
     ],
 
     module: {

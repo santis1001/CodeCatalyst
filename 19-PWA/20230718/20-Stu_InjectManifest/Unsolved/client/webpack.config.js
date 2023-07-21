@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // TODO: Require the InjectManifest class of the WorkBoxPlugin 
+const WorkboxPlugin = require('workbox-webpack-plugin');
+const { InjectManifest } = WorkboxPlugin;
 
 const path = require('path');
 
@@ -18,7 +20,11 @@ module.exports = {
       title: 'Webpack Plugin',
     }),
     new MiniCssExtractPlugin(),
-   // TODO: Add InjectManifest Plugin
+    // TODO: Add InjectManifest Plugin
+    new InjectManifest({
+      swSrc: './src/sw.js',
+      swDest: 'service-worker.js'
+    }),
   ],
   module: {
     rules: [

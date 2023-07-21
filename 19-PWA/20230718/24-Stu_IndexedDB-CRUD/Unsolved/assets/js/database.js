@@ -49,7 +49,7 @@ export const getOneDb = async (id) => {
 export const deleteDb = async (id) => {
   console.log('DELETE from the database', id);
   const todosDb = await openDB('todos', 1);
-  const tx = todosDb.transaction('todos', 'readonly');
+  const tx = todosDb.transaction('todos', 'readwrite');
   const store = tx.objectStore('todos');
   const request = store.delete(id);
   const result = await request;
@@ -60,12 +60,31 @@ export const deleteDb = async (id) => {
 // TODO: Fix the function below:
 export const putDb = async (id, content) => {
   console.log('PUT to the database');
-  const todosDb = await openDB('todos', 1);
-  const tx = todosDb.transaction('todo', 'readwrite');
-  const store = tx.objectStore('todos');
-  const request = store.put({ id: id, todo: content });
-  const result = await request;
-  console.log('🚀 - data saved to the database', result);
-};
+  try {
+    
+    const todosDb = await openDB('todos', 1);
+    const tx = todosDb.transaction('todos', 'readwrite');
+    const store = tx.objectStore('todos');
+    const request = store.put({ id: id, todo: content });
+    const result = await request;
+    console.log('🚀 - data saved to the database', result);
+  } catch (error) {
+    
+  }
+  };
+  
+// export const putDb = async (id, content) => {
+//   console.log('PUT to the database');
+//   try {
+//     const todosDb = await openDB('todos', 1);
+//     const tx = todosDb.transaction('todos', 'readwrite');
+//     const store = tx.objectStore('todos');
+//     const request = store.put({ id: id, todo: content });
+//     const result = await request;
+//     console.log('🚀 - data saved to the database', result);
+//   } catch (error) {
+//     console.error('Error putting data into the database:', error);
+//   }
+// };
 
 initdb();
