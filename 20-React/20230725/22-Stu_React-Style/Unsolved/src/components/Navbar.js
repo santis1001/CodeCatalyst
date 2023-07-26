@@ -4,11 +4,25 @@ import '../styles/Navbar.css';
 
 // TODO: Create a styles object called "styles"
 
+const styles ={
+  navbar: {
+  background: '#6a1b9a',
+  height: '60'
+},
+
+a: {
+  color: 'white',
+  fontSize: '1.3rem',
+  textDecoration: 'none',
+  margin: 5,
+  lineHeight: 3,
+}
+};
 function Navbar() {
   // TODO: Add a style attribute to `nav`
   return (
-    <nav className="navbar">
-      <a href="/">Welcome</a>
+    <nav style={styles.navbar}>
+      <a style={styles.a} href="/">Welcome</a>
     </nav>
   );
 }

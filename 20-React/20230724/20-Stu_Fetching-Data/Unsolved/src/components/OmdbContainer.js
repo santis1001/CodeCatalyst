@@ -9,27 +9,27 @@ import MovieDetail from './MovieDetail';
 import API from '../utils/API';
 
 const OmdbContainer = () => {
-  const [result, setResult] = useState({});
+  const [result, setResult] = useState([]);
   const [search, setSearch] = useState('');
 
   // When the search form is submitted, use the API.search method to search for the movie(s)
   const searchMovie = (query) =>
-    API.search(query)
-      .then((res) => setResult(res.data))
-      .catch((err) => console.log(err));
+  API.search(query)
+    .then((res) => setResult(res.data))
+    .catch((err) => console.log(err));
 
   // TODO: Fix the useEffect hook running after every
   useEffect(() => {
     searchMovie('The Matrix');
-  });
+  }, []);
 
   // TODO: Fix the handleInputChange function
-  const handleInputChange = (e) => console.log(e.target.value);
+  const handleInputChange = (e) => setSearch(e.target.value);
 
   // TODO: Fix the handleFormSubmit function not actually searching for the movie
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    setSearch(e.target.value);
+    searchMovie(search);
   };
 
   // Destructure the result object to make the code more readable, assign them to empty strings to start

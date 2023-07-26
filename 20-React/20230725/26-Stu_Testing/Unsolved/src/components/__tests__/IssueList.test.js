@@ -4,6 +4,8 @@ import { act } from 'react-dom/test-utils';
 import pretty from 'pretty';
 // TODO: Import the IssueList component
 
+import IssueList from '../IssueList';
+
 let container = null;
 
 beforeEach(() => {
@@ -47,8 +49,11 @@ describe('IssueList', () => {
     });
 
     // TODO: Format the rendered HTML with the pretty package
+    const html = pretty(container.innerHTML);
 
     // TODO: Expect the rendered component to match the snapshot
+    expect(html).toMatchSnapshot();
+
   });
 
   // In this example, we check to see if the issueList contains the text "Git: Support git history in VSCode"

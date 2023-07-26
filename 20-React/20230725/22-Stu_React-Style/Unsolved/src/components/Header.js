@@ -3,13 +3,28 @@ import React from 'react';
 import '../styles/Header.css';
 
 // TODO: Create a styles object called "styles"
+const styles = {
+  header: {
+    background: '#b71775',
+    height: '200px'
+  },
+  
+  h1: {
+    margin: 0,
+    paddingTop: '75px',
+    textAlign: 'center',
+    color: 'white',
+    fontSize: '3rem'
+  }
+  
+}
 
 function Header() {
   // TODO: Add a style attribute to header and the h1 element
 
   return (
-    <header className="header">
-      <h1>Welcome</h1>
+    <header style={styles.header}>
+      <h1 style={styles.h1}>Welcome</h1>
     </header>
   );
 }

@@ -3,12 +3,22 @@ import React from 'react';
 import '../styles/Section.css';
 
 // TODO: Create a styles object called "styles"
+const styles = {
+  section : {
+    background: '#f3e5f5',
+    padding: 20
+  },
+
+  ft2: {
+    textAlign: 'center'
+  }
+}
 
 function Section() {
   // TODO: Add a style attribute to `section`
   return (
-    <section className="section">
-      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+    <section style={styles.section}>
+      <h2 style={styles.ft2}>Lorem Ipsum Dolor Sit Amet</h2>
       <p>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
