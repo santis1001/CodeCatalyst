@@ -16,7 +16,8 @@ const ThoughtForm = () => {
     update(cache, data, addThought) {
       try {
         const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
-
+        
+        console.log(addThought);
         cache.writeQuery({
           query: QUERY_THOUGHTS,
           data: { thoughts: [addThought, ...thoughts] },
